@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <style>
+      .container{
+	   text-align  : center;
+	   margin  : 200px;
+	   border : 2px solid black;
+	   background-color  : yellow;
+	   padding : 10px;
+	   width : 40%;
+	  }
+   
+   </style>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ </head>
+  <body bgcolor="green">
+  
+    <div class="container">
+	  <form>
+	     <lable for="decimalNo"><b>Enter Decimal Number:<b></lable><br>
+		 <input type="number" id="decimalNo" name="decimalNo" ><br><br>
+		 
+		 <input type="button" onclick="myFunction()"  id="convert" value="Convert" name="convert">
+		 <input type="button" onclick="myfunction1()" id="reset" value="Reset" name="reset"> <br><br>
+		 
+		 <lable for="binaryNo">Binary Number:</lable><br>
+		 <textarea  id="binaryNo" name="binaryNo" ></textarea><br><br>
+		 
+		 <lable for="hexNo">Hex Number:</lable><br>
+		 <textarea id="hexNo" name="hexNo"></textarea><br><br>
+		 
+		 <lable for="octalyNo">Octal Number:</lable><br>
+		 <textarea type="number" id="octalNo" name="octalNo"></textarea><br><br>
+		 
+	</div>
+	
+	<script>
+	   
+	   function myFunction(){
+	      let dec=parseInt(document.getElementById("decimalNo").value);
+		  let binary = dec.toString(2);
+		  let hex = dec.toString(16);
+		  let oct = dec.toString(8);
+		  
+		  document.getElementById("binaryNo").textContent = binary;
+		  document.getElementById("hexNo").textContent = hex;
+		  document.getElementById("octalNo").textContent = oct;
+	   }
+	   
+	   function myfunction1(){
+	     
+		 document.getElementById("binaryNo").textContent = "";
+		 document.getElementById("hexNo").textContent = "";
+		 document.getElementById("octalNo").textContent = "";
+		 document.getElementById("decimalNo").textContent="";
+		 
+		 
+	   }
+	
+	</script>
+  </body>
+</html>
